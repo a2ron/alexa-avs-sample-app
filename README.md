@@ -1,5 +1,8 @@
 ![](../../wiki/assets/alexa-logo-3.png)
 
+:warning: Starting January 25, 2018, the AVS Java Sample App will be put into maintenance mode. To leverage the latest Alexa features, please use the [AVS Device SDK C++ Sample App, which you can find here](https://github.com/alexa/avs-device-sdk/wiki). To discuss any specific dependencies on the AVS Java Sample App, feel free to reach out to us [here](https://www.amazon.com/forms/231ff404-261e-454c-917d-97208d9ea268).
+
+
 ## About the project
 
 This project provides a step-by-step walkthrough to help you build a **hands-free** [Alexa Voice Service](https://developer.amazon.com/avs) (AVS) prototype in 60 minutes, using wake word engines from [Sensory](https://github.com/Sensory/alexa-rpi) or [KITT.AI](https://github.com/Kitt-AI/snowboy). Now, in addition to pushing a button to "start listening", you can now also just say the wake word "Alexa", much like the [Amazon Echo](https://amazon.com/echo). You can find step-by-step instructions to set up the hands-free prototype on [Raspberry Pi](../../wiki/Raspberry-Pi), or follow the instructions to set up the push-to-talk only prototype on [Linux](../../wiki/Linux), [Mac](../../wiki/Mac), or [Windows](../../wiki/Windows).
@@ -30,6 +33,16 @@ Or you can prototype with these third-party dev kits -
 ---
 
 ## What's new?
+
+**January 25, 2018:** 
+
+*Important*  
+
+* The AVS Java Sample App is in maintenance mode. To leverage the latest Alexa features, please use the [AVS Device SDK C++ Sample App, which you can find here](https://github.com/alexa/avs-device-sdk/wiki). To discuss any specific dependencies on the AVS Java Sample App, feel free to reach out to us [here](https://www.amazon.com/forms/231ff404-261e-454c-917d-97208d9ea268).
+
+*Known Issue* 
+
+* If you are using JDK 1.8.0.161 or 1.8.0.162, you must manually update your [`alpn-boot.version` in your pom.xml](https://github.com/alexa/alexa-avs-sample-app/blob/3a3657cf27f74ae6ed2035946f8c5c1f678aa02d/samples/javaclient/pom.xml) file to 8.1.12.v20180117.
 
 **December 3, 2017:** 
 
