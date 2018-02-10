@@ -1,13 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
+<project 
+  xmlns="http://maven.apache.org/POM/4.0.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.amazon.alexa.avs</groupId>
   <artifactId>sample-java-client</artifactId>
   <version>20160207.7</version>
   <name>Alexa Voice Service Sample Java Client</name>
   <url>https://developer.amazon.com/appsandservices/solutions/alexa/alexa-voice-service</url>
-
   <properties>
     <jetty.version>9.3.7.v20160115</jetty.version>
     <!-- The latest version of alpn-boot that supports JDK 1.8.0_121 -->
@@ -17,7 +16,23 @@
     <slf4j.version>1.7.10</slf4j.version>
     <log4j.version>2.3</log4j.version>
   </properties>
+  <repositories>
+    <repository>
+      <id>oss-snapshots-repo</id>
+      <name>Sonatype OSS Maven Repository</name>
+      <url>https://oss.sonatype.org/content/groups/public</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+  </repositories>
   <dependencies>
+    <dependency>
+      <groupId>com.pi4j</groupId>
+      <artifactId>pi4j-core</artifactId>
+      <version>1.2-SNAPSHOT</version>
+    </dependency>
     <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
@@ -77,7 +92,7 @@
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-core</artifactId>
       <version>${log4j.version}</version>
-    </dependency> 
+    </dependency>
     <!-- Jetty 9.3.7-SNAPSHOT -->
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
